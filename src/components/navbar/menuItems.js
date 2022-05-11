@@ -1,15 +1,19 @@
 import { AiOutlineDown } from 'react-icons/ai';
+import logo from '../../assets/img/logo.svg';
 
 export const icons = [AiOutlineDown];
 
 
 export default [
     {
+        id : 0,
         title : 'خیلی سبز',
         url : '/pretty-green',
         hasSubmenu : false,
+        logoIcon : logo,
     },
     {
+        id : 1,
         title : 'محصولات',
         url : '/products',
         hasSubmenu : true,
@@ -41,11 +45,13 @@ export default [
         ]
     },
     {
+        id : 2,
         title : 'وبلاگ',
         url : '/blog',
         hasSubmenu : true,
     },
     { 
+        id : 3,
         title : 'خدمات',
         url : '/services',
         hasSubmenu : true,
@@ -77,6 +83,7 @@ export default [
 
     },
     {
+        id : 4,
         title : 'درباره ما',
         url : '/about-us',
         hasSubmenu : false

@@ -10,8 +10,8 @@ export const NavbarContainer = styled(Container)`
     height : 8rem;
     position : sticky;
     top : 0;
-    font-size : 2rem;
-    font-family : vazirBold;
+    font-size : 1.6rem;
+    font-family : vazirRegular;
 `;
 
 // ==== Menu Bar Styles ====
@@ -32,9 +32,22 @@ export const Menu = styled.ul`
     display : flex; 
 `;
 export const MenuItem = styled.li`
+    padding : 2rem 0;
+    margin-left : 4rem;
+    line-height : 3rem; 
+
+    &:first-child {
+        padding : 1rem .2rem 1rem 1rem;
+    }
 `;
 export const NavLink = styled(Link)`
+
+    & > svg {
+        vertical-align : middle;
+        margin-right : .5rem;
+    }
 `;
+
 
 // ---- Hamburger Icon Styles ----
 export const HamburgerIcon = styled.div`
@@ -63,4 +76,10 @@ export const FaTimesIcon = styled(FaTimes)`
 export const MenuColumn = styled(Col)`
     position : relative;
     height : 8rem;
+`;
+
+export const LogoImg = styled.img`
+    width : 5rem;
+    margin-left : 1rem;
+
 `;
