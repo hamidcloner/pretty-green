@@ -29,16 +29,55 @@ export const Nav = styled.nav`
 ;
 `;
 export const Menu = styled.ul`
-    display : flex; 
+    ${(props) => {
+        if(!props.subMenu){
+            return `
+                display : flex;
+            `;   
+        }
+        else {
+            return `
+                position : absolute;
+                padding : 0 1rem;
+                font-size : 1.5rem;
+                min-width : 15rem;
+                top : 7rem;
+                border-radius : .5rem;
+                display : none;
+
+          
+            `;
+        }
+    }};
+  
+
+    
 `;
 export const MenuItem = styled.li`
-    padding : 2rem 0;
-    margin-left : 4rem;
-    line-height : 3rem; 
+    ${(props) => {
+        if(!props.subMenu){
+            return `
+                padding : 2rem 0;
+                margin-left : 4rem;
+                line-height : 3rem; 
+                position : relative;
+            
+                &:first-child {
+                    padding : 1rem .2rem 1rem 1rem;
+                };
+                &:hover > ul {
+                    display : block;
+                }
+            `;
+        }
+        else {
+            return `
+                padding : .2rem .2rem;
+            `;
+        };
+    }};
 
-    &:first-child {
-        padding : 1rem .2rem 1rem 1rem;
-    }
+
 `;
 export const NavLink = styled(Link)`
 
@@ -47,6 +86,9 @@ export const NavLink = styled(Link)`
         margin-right : .5rem;
     }
 `;
+
+// ---- Desktop Submenu Styles ---
+
 
 
 // ---- Hamburger Icon Styles ----
